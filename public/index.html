@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Minimal CSP placeholder (works for local demo) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; object-src 'none'">
+  <title>Deakin — Home</title>
+  <link rel="stylesheet" href="../src/css/styles.css">
+  <script>window.NEWS_DATA = [];</script>
+  <script defer src="../src/js/app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Deakin (Sprint 1)</h1>
+    <p class="muted">Prototype — Home page with Search and News &amp; Events</p>
+
+    <form id="searchForm" aria-label="Site search">
+      <label for="searchInput" class="muted">Search courses, units, news…</label>
+      <div class="form-row">
+        <input type="text" id="searchInput" name="q" placeholder="Search courses, units, news…" aria-describedby="searchMsg" />
+        <button type="submit" aria-label="Search">Search</button>
+      </div>
+      <div id="searchMsg" class="notice" role="status" aria-live="polite"></div>
+    </form>
+  </header>
+
+  <main>
+    <h2>News &amp; Events</h2>
+    <div id="newsPreview"></div>
+  </main>
+
+  <footer>
+    <p>Privacy: no personal data is stored. Search terms remain client-side. Accessibility: inputs are labelled; keyboard and focus states are supported. Security: user content is rendered as plain text (<code>textContent</code>), not HTML.</p>
+  </footer>
+
+  <script>
+    App.attachSearch('#searchForm', '#searchInput');
+    App.renderNewsPreview('#newsPreview', 4);
+  </script>
+</body>
+</html>
