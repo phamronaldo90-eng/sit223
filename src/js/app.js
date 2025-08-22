@@ -161,4 +161,19 @@
     attachSearch, renderNewsPreview,
     renderSearchPage, renderNewsDetail
   };
+  document.addEventListener('DOMContentLoaded', () => {
+  if (document.querySelector('#searchForm')) {
+    App.attachSearch('#searchForm', '#searchInput');
+  }
+  if (document.querySelector('#newsPreview')) {
+    App.renderNewsPreview('#newsPreview', 4);
+  }
+  if (document.querySelector('#resultsList')) {
+    App.renderSearchPage();
+  }
+  if (document.querySelector('#newsTitle')) {
+    App.renderNewsDetail();
+  }
+});
+
 })();
