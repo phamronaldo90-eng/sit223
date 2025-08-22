@@ -1,13 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; object-src 'none'">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data:; object-src 'none'">
   <title>Search — Deakin</title>
-  <link rel="stylesheet" href="../src/css/styles.css">
-  <script>window.NEWS_DATA = [];</script>
+
+  <link rel="stylesheet" href="../src/css/styles.css" />
   <script defer src="../src/js/app.js"></script>
 </head>
 <body>
@@ -16,7 +16,8 @@
     <form id="searchForm" aria-label="Site search">
       <label for="searchInput" class="muted">Search courses, units, news…</label>
       <div class="form-row">
-        <input type="text" id="searchInput" name="q" placeholder="Search courses, units, news…" aria-describedby="searchMsg" />
+        <input type="text" id="searchInput" name="q"
+               placeholder="Search courses, units, news…" aria-describedby="searchMsg" />
         <button type="submit" aria-label="Search">Search</button>
       </div>
       <div id="searchMsg" class="notice" role="status" aria-live="polite"></div>
@@ -27,11 +28,5 @@
     <h2 id="resultsHeading"></h2>
     <ul id="resultsList"></ul>
   </main>
-
-  <footer>
-    <p class="muted">Tip: Try search terms like <em>workshop</em>, <em>library</em>, or <em>orientation</em>.</p>
-  </footer>
-
-  
 </body>
 </html>
